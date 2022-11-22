@@ -15,5 +15,6 @@ A ideia era testar a criação de uma nova conta na plataforma:
 
   - Finalizar na tela de 'My Account'
 
+  > Tela final do teste
   ![preview](../DESAFIOCWI/cypress/fixtures/Reset%20Magento.png)
 
