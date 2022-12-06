@@ -1,3 +1,5 @@
+import { faker }  from '@faker-js/faker' 
+
 class Adress {
     /* Declaração de variaveis para receber atributos que serão acessado*/
     endereco = '#street_1'
@@ -14,9 +16,9 @@ class Adress {
     preencher() {
         /* Esse comando preenche os dados obrigatórios de endereço e depois confirma a alteração do endereço.
         Os dados obrigatórios são: Rua, numero, cidade, telefone, país, estado e CEP. */
-        cy.get(this.endereco).type('Rua do Comercio')
+        cy.get(this.endereco).type(`${faker.address.street()}`)
         cy.get(this.numero).type('13')
-        cy.get(this.cidade).type('Córrego do Ouro')
+        cy.get(this.cidade).type(`${faker.address.city()}`)
         cy.get(this.telefone).type(`${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}`)
         cy.get(this.pais).select(31)
         cy.get(this.estado).select(this.lugar)
